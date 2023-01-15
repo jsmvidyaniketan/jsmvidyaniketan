@@ -1,0 +1,410 @@
+﻿<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>J.S.M Vidhya Niketan</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="asset/css/style.css">
+<link rel="stylesheet" href="asset/css/popup.css">
+<!--<script type="text/javascript" src="https://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script>
+
+ <script type="text/javascript" src="js/slider/jquery.js"></script>
+ <script type="text/javascript" src="js/slider/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="js/slider/jcarousel.responsive.js"></script>
+-->
+
+<script src="asset//jquery-1.9.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        jQuery.noConflict();
+       // var url = 'https://parentsalarm.com/Service/WebMarqueejsonp';
+        var data = "1090";
+        $.ajax({
+            url: url,
+            data: { 'id': data },
+            type: "GET",
+            dataType: "jsonp",
+            jsonp: "callback",
+            success: function (data) {
+                var data = JSON.parse(data);
+                var a = "", b = "", c = "";
+                $.each(data, function (i) {
+                    //                    a += data[i].MarqTitle + ", ";
+                    //                    c += data[i].MarqLink
+                    a += '<a href="' + data[i].MarqLink + '" style="text-decoration:none;  color:#000;" target="_blank">' + data[i].MarqTitle + '</a>' + ", ";
+                });
+//                alert(a);
+                b = a.slice(0, -2);
+//                alert(data[i].MarqLink);
+                //                $('#marqText').append('<marquee><a href="' + data[i].MarqLink + '" style="text-decoration:none;  color:#000;" target="_blank">' + b + '</a><marquee>');
+                $('#marqText').append('<marquee>' + b + '<marquee>');
+            },
+            error: function () {
+                alert("failed");
+
+            }
+
+        });
+    });
+</script>
+
+
+<!--<script>
+setTimeout(function() {
+	var bb = $('#popup').blurbox({blur: 0, animateBlur: true, bgColor: 'rgba(0,0,0,0.8)'})
+	bb.show();
+},1000);
+</script>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--<script src="js/blurbox.js"></script>
+
+<script>
+	window.onload = function(){
+    document.getElementById('close').onclick = function(){
+        this.parentNode.parentNode.parentNode
+        .removeChild(this.parentNode.parentNode);
+        return false;
+		
+    };
+};
+</script>
+-->
+
+<link href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans" rel="stylesheet" type="text/css">
+<link href="https://www.google.com/fonts#UsePlace:use/Collection:Oswald" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+
+<script type="text/javascript">
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'Oswald']
+
+        }
+    });
+</script>
+
+
+<script>
+	
+var x = false;
+setInterval(function() {
+    $(".hl").css("color", x ? "#ff0000" : "#000");
+    x = !x;
+}, 400);
+
+</script>
+
+
+<style style="text/css">
+		
+.information {
+ height: 30px;	
+ overflow: hidden;
+ position: relative;
+ background:#fafafa;
+ border:1px dashed #e6e6e6;
+ padding:5px;
+ 
+}
+.information marquee {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 30px;
+ text-align: left;
+ padding:0 10px 0 10px;
+ color:#1b5cab;
+ font-weight:bold;
+ 
+
+ /* Apply animation to this element */	
+ -moz-animation: example4 10s ease-out;
+ -webkit-animation: example4 10s ease-out;
+ animation: example4 10s ease-out;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example4 {
+ 0%   { -moz-transform: translateX(200%); }
+ 100% { -moz-transform: translateX(0%); }
+}
+@-webkit-keyframes example4 {
+ 0%   { -webkit-transform: translateX(200%); }
+ 100% { -webkit-transform: translateX(0%); }
+}
+@keyframes example4 {
+ 0%   { 
+ -moz-transform: translateX(200%); /* Firefox bug fix */
+ -webkit-transform: translateX(200%); /* Firefox bug fix */
+ transform: translateX(200%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(0%); /* Firefox bug fix */
+ -webkit-transform: translateX(0%); /* Firefox bug fix */
+ transform: translateX(0%); 
+ }
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<!-- Popup -->
+
+
+<!-- End of Popup -->
+
+<!-- Header -->
+<div class="header">
+<div class="inner-header">
+
+<!-- Logo -->
+<div class="logo">
+<a href="index.html"><img src="asset/logo.jpg" width="330" height="82" alt="Logo"></a>
+</div>
+<!-- End of Logo -->
+
+<!-- Menu -->
+<div class="nav">
+<nav>
+<ul class="sf-menu">
+<li class="current"><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="academics.html">Academics</a></li>
+<li><a href="admission.html">Admission</a></li>
+<li><a href="facility.html">Facility</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="downloads.html">Downloads</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="clear"></div>
+</nav>
+</div>
+<!-- End of Menu -->
+
+</div>
+</div>
+<!-- End of Header -->
+
+
+
+<!-- Wrapper -->
+<div class="wrapper">
+
+<!-- Content -->
+<div class="content">
+
+<!-- Welcome-content -->
+<div class="welcome-content"></span>
+<span>Welcome to J.S.M Vidya Niketan School</span>
+<p>Jai Singh Ram Dulari (J.S.R.D), a charitable society founded in the year
+    2016. It has constantly displayed a complete awareness in the field of education
+    by setting up the English medium School for boys and girls in Mahabalipur(paliganj), Patna by
+    the name of J.S.M Vidhya Niketan School in 2016. </p>
+</div>
+<!-- End of Welcome-content -->
+
+<!-- Tabs -->
+<div class="tabs" style="width: 285px; height:auto;">
+<!--<a href="facility.html"><img src="images/infrastructure.png" width="199" height="52" alt="Infrastructure"/></a>-->
+<a href="" target="_blank" class="hl" style="padding: 10px 20px; border: 1px dotted rgb(204, 204, 204); background: rgb(255, 233, 187); margin-top: 25px; border-radius: 10px; font-weight: bold; float: left; color: rgb(0, 0, 0);">Admission Form Online 2023-24</a>
+<!--<a href="https://www.jotform.com/213571438665058" target="_blank" class="hl" style="padding: 10px 20px; border: 1px dotted rgb(204, 204, 204); background: rgb(255, 233, 187); margin-top: 25px; border-radius: 10px; font-weight: bold; float: left; color: rgb(0, 0, 0);">REGISTRATION FOR 2022-23</a>-->
+<a href="J.S.MVIDYANIKETAN-MANDATORY-PUBLIC-DISCLOSURERS.html" target="_blank"><img src="MPT.png" width="199" height="52" alt="Mandatory Public Disclosure"></a>
+<a href="notice.html"><img src="notice.png" width="199" height="52" alt="Notice Board">
+<a href="facility.html"><img src="facilities.png" width="199" height="52" alt="Facilities"></a>
+
+<a href="holiday-homework.html"><img src="holiday-homework.png" width="199" height="52" alt="Holiday-Homework"/></a>
+	
+<!--<a href="result.html"><img src="images/x-xii.png" width="199" height="52" alt="Holiday-Homework"></a>
+	
+<a href="question-bank.html"><img src="images/question-bank-class-x.png" width="199" height="52" alt="Holiday-Homework" style="margin-bottom: 20px;"></a>
+
+<a href="Letter to Participating School for Cluster III Kabaddi .pdf" target="_blank"  class="hl" style="padding:10px 20px 10px 20px; border:1px dotted #ccc; background:#FFE9BB; margin-top: 20px; margin-bottom: 20px; border-radius:10px; font-weight:bold;">CLUSTER III KABADDI - 2018</a>
+	
+<a href="Notice Inviting Tender.pdf" target="_blank"  class="hl" style="padding:10px 20px 10px 20px; border:1px dotted #ccc; background:#FFE9BB; margin-top: 25px; border-radius:10px; font-weight:bold;  float: left;">Notice Inviting Tender</a>-->
+	
+<a href="career.pdf" target="_blank"><img src="careers.png" width="199" height="52" alt="Houses" style="margin-top:20px;"></a>	
+<!--
+<a href="admnotice.html"><img src="images/admission-notice.png" width="199" height="52" alt="Admission Notice"/></a>
+<a href="vacancy.html"><img src="images/current-vacancy.png" width="199" height="52" alt="Current Vacancy"/></a>-->
+<!--<a href="volleyball-2015.html"><img src="images/volleyball-2015.png" width="199" height="52" alt="volleyball-2015"></a>-->
+</div>
+<!-- End of Tabs -->
+
+<div class="clear"></div>
+
+	
+<div class="information" id="marqText" style="margin:195px 0 0 0px;">
+<!-- <marquee>Formative Assessment - 3 portion,Open Text Based Assessment (OTBA), Admission Notice and Current Vacancy Notification, Formative Assessment - 4 portion, Examination Date Sheet (Pre - Board-2 & FA-4)  is available on the website...</marquee> -->
+</div>
+
+
+<div class="welcome-content" style="width:96%; margin-top:5px;">
+
+<p style="font-size:16px; line-height:24px;">“By education I mean an all-round drawing out of the best in child and man- body, mind and sprit”.<br>
+“But unless the development of the mind and body goes hand in hand with a corresponding awakening of the soul, the former alone would prove to be poor lopsided affair” <br>
+<strong>MAHATMA GANDHI.</strong>
+</p>
+</div>
+
+<!-- Main-Content -->
+<div class="main-content">
+
+<div class="our-history">
+<h1 style="color:#E86404;">OUR HISTORY</h1>
+<p>Jai Singh Ram Dulari (J.S.R.D), a charitable society founded in the year
+    2016. It has constantly displayed a complete awareness in the field of education
+    by setting up the English medium...</p>
+<div><a href="about.html" class="read-more orange">Read More +</a></div>
+</div>
+
+<div class="our-vision">
+<h1 style="color:#54761A;">AIM & OBJECTIVE</h1>
+<p>J.S.M Vidhya Niketan, a pioneer in the trendsetting education in the state, provides an environment for al-round development of pupils and their integration with the society based on values of Indian Culture... </p>
+<div><a href="about.html" class="read-more green">Read More +</a></div>
+</div>
+
+<div class="aims-objectives">
+<h1 style="color:#006BBD;">FROM THE PRINCIPAL'S DESK</h1>
+<p>Seven years before we embarked on a journey with the simple objective of serving a very lagging and visible need of the immediate community of the city by preserving...</p>
+
+<div><a href="about.html" class="read-more blue">Read More +</a></div>
+</div>
+
+</div>
+<!-- End of Main-Content -->
+
+
+</div>
+<!-- End of Content -->
+
+
+</div>
+<!-- End of Wrapper -->
+
+
+<!-- Management Speaks
+<div class="management-speaks">
+<div class="ms-content">
+<h1 style="margin:10px 0 0 15px;">MANAGEMENT SPEAKS</h1>
+
+  <div id="tabs1-js">
+  
+  
+              <div class="jcarousel-wrapper">
+                <div class="jcarousel" data-jcarousel="true">
+<ul style="left: 0px; top: 0px;">
+
+<li style="width: 1000px;">
+        
+<div class="ms-left">
+<img src="images/administrator.png" width="100" height="100" style="margin-left:10px;">
+<p style="text-align:center; font-size:14px;">Mrs. Anita Kunal<br>
+Administrator</p>
+</div>
+            
+<div class="content">
+<div class="ms-left">
+</div>
+<div class="ms-right">
+<p style="line-height:24px;"><span style="margin:-10px 5px 0 -25px;"><img src="images/quote-begin.png"></span>It is a matter of great pride and pleasure that Gyan Niketan School making great strides and touching the pinnacle of glory not only in academics but all spheres of life proving true to the real spirit and aim of education. The success owes to the dedicated efforts of all the staff members and an optimistic attitude. The stress on all round development coupled with no dearth of much reach such heights and prepare on discipline and morality has formed the basis and guideline for the pupil’s pursuit of education. We are determined to more ached and add new feathers to our success in every forthcoming session.</p>
+</div>
+</div>        
+</li>
+           
+<li style="width: 1000px;">
+        
+<div class="ms-left">
+<img src="images/jiya-lal.png" width="100" height="100" style="margin-left:10px;">
+<p style="text-align:center; font-size:14px;">Mr.Jiya Lal Arya<br>
+Chairman</p>
+            </div>
+            
+        	<div class="content">
+<div class="ms-left">
+</div>
+<div class="ms-right">
+<p style="line-height:24px;"><span style="margin:-10px 5px 0 -25px;"><img src="images/quote-begin.png"></span>It is indeed heartening to note that the school has been making an all round progress and touching new heights of glory in every forthcoming session. Academics as well as co-curricular activities are going hand in hand. The infrastructure and the devoted team of staff members have made the goals reachable. The school is determined in its efforts to inculcate discipline academics and co-curricular activities. My heartfelt wishes are for the progress and development of Gyan Niketan Girls School.</p>
+</div>
+    </div>        
+		   </li>
+
+<li style="width: 1000px;">
+        
+<div class="ms-left">
+<img src="images/mukherjee.png" width="100" height="100" style="margin-left:10px;">
+<p style="text-align:center; font-size:14px;">J.K.Mukherjee<br>
+Principal</p>
+            </div>
+            
+        	<div class="content">
+<div class="ms-left">
+</div>
+<div class="ms-right">
+<p style="line-height:24px;"><span style="margin:-10px 5px 0 -25px;"><img src="images/quote-begin.png"></span>The team of Gyan Niketan Girls School successfully completed a span of three years of its journey since its inception in 03/04/2012. It was a pleasure for all my teachers, staff members and me as well as to get rejuvenated and energized by absorbing the positive vibes from our dear students. In collaboration with the parents, within these years we have succeeded in making the school a home away from home for the students self directed learning has been made possible among the young learners.</p>
+</div>
+    </div>        
+		   </li>		
+           
+           
+<li style="width: 1000px;">
+        
+<div class="ms-left">
+<img src="images/prabha-sinha.png" width="100" height="100" style="margin-left:10px;">
+<p style="text-align:center; font-size:14px;">Prabha Sinha<br>
+Head Mistress</p>
+            </div>
+            
+        	<div class="content">
+<div class="ms-left">
+</div>
+<div class="ms-right">
+<p style="line-height:24px;"><span style="margin:-10px 5px 0 -25px;"><img src="images/quote-begin.png"></span>Our School Gyan Niketan Girls School stands at threshold of great emergence. It is growing like a plant from a sapling planted just 3years back. You and I are both witnessing history in the making. Very soon this school will grow into a big tree which will provide all our students with the fruits of success and soothing shade of self confidence.<br>
+As a leader of this school, I want my children not only to be good at academics and confident in their endeavours but also want them to be alert and sensitive about the environment and act accordingly.
+</p>
+<span style="margin:-25px 0 0 550px;"><img src="images/quote-end.png"></span>            
+</div>
+</div>      
+</li>		
+           
+           
+    
+</ul>
+</div>
+
+                <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true"></a>
+                <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true"></a>
+
+            </div>
+
+  </div>
+
+
+
+</div>
+</div>
+End of Management Speaks -->
+
+<!-- Footer -->
+<div class="footer" style="margin-top:0px;">
+<div class="inner-footer">
+<div class="if-left">
+<p>© 2023 J.S.M Vidhya Niketan School, All right reserved. Design By <a href="https://www.instagram.com/pushkar.kumar22/" target="_blank">Pushkar_Kumar</a></p>
+
+</div>
+<div class="if-right">
+<a href="index.html"><img src="fb.png" width="32" height="32" alt="Facebook" style="margin-right:5px;"></a>
+<a href="index.html"><img src="twitter.png" width="32" height="32" alt="Twitter" style="margin-right:5px;"></a>
+<a href="index.html"><img src="google.png" width="32" height="32" alt="Google" style="margin-right:5px;"></a>
+</div>
+</div>
+</div>
+<!-- End of Footer -->
+
+<script src="asset/js/main.js"></script>
+	
+</body>
+</html>

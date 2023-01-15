@@ -1,0 +1,126 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>J.S.M Vidya Niketan School</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="asset/css/style.css">
+<link rel="stylesheet" href="asset/css/css3-gallery.css">
+<link href="https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans" rel="stylesheet" type="text/css">
+<link href="https://www.google.com/fonts#UsePlace:use/Collection:Oswald" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script src="asset6/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'Oswald']
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+		//jQuery.noConflict();
+       // var url = 'https://www.parentsalarm.com/Service/WebGalleryjsonp';
+        var data = "1090";
+        $.ajax({
+            url: url,
+            data: { 'id': data },
+            type: "GET",
+            dataType: "jsonp",
+            jsonp: "callback",
+            success: function (data) {
+                var data = JSON.parse(data);
+				var a="";
+                $.each(data, function (i) {                    
+					if(a==""||a!=data[i].wbGal.GalleryTitle)
+					{
+							$('.container').append('<h2 style="border-bottom:1px dashed #FF931E!important; color:#454545!important; padding:10px 0 10px 0px!important; width:1000px!important; font-size:16px!important; margin-top:20px!important; font-weight:bold; margin-bottom:10px!important; margin:0 auto; padding:0; clear:both!important; margin-left:10px!important;">'+data[i].wbGal.GalleryTitle+'</h2>');
+					//document.getElementById("GalleryTitleBoys").innerHTML = data[i].wbGal.GalleryTitle;
+						a = data[i].wbGal.GalleryTitle;
+					}
+					$('.container').append('<ul class="lb-album"><li><a href="#image-'+i+'"><img src="'+data[i].AttachmentPath+'" alt="image01"><span>' + data[i].GalleryName + '</span></a><div class="lb-overlay" id="image-'+i+'"><img src="'+data[i].AttachmentPath+'" alt="image01" /><div><a href="#image-10" class="lb-prev">Prev</a><a href="#image-2" class="lb-next">Next</a></div><a href="#page" class="lb-close">x Close</a></div></li></ul>');                    
+                });
+            },
+            error: function () {
+                alert("failed");
+
+            }
+
+        });
+    });
+</script>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+<div class="inner-header">
+
+<!-- Logo -->
+<div class="logo">
+    <a href="index.html"><img src="asset/logo.jpg" width="330" height="82" alt="Logo"></a>
+</div>
+<!-- End of Logo -->
+
+<!-- Menu -->
+<div class="nav">
+<nav>
+<ul class="sf-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="academics.html">Academics</a></li>
+<li><a href="admission.html">Admission</a></li>
+<li><a href="facility.html">Facility</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li class="current"><a href="gallery.html">Gallery</a></li>
+<li ><a href="downloads.html">Downloads</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="clear"></div>
+</nav>
+</div>
+<!-- End of Menu -->
+
+</div>
+</div>
+<!-- End of Header -->
+
+<!-- Title -->
+<div class="title">
+<div class="inner-title">
+<h2>Gallery</h2>
+</div>
+</div>
+
+<!-- End of Title -->
+
+<!-- Content -->
+<div class="container">
+<div class="clear">
+</div>
+				</div>
+<!-- End of Container -->
+
+
+
+<!-- Footer -->
+<div class="footer">
+<div class="inner-footer">
+<div class="if-left">
+<p>© 2023 J.S.M Vidya Niketan School, All right reserved. Design By <a href="https://www.instagram.com/pushkar.kumar22/" target="_blank">Pushkar_Kumar</a></p>
+
+</div>
+<div class="if-right">
+<a href="index.html"><img src="fb.png" width="32" height="32" alt="Facebook" style="margin-right:5px;"></a>
+<a href="index.html"><img src="twitter.png" width="32" height="32" alt="Twitter" style="margin-right:5px;"></a>
+<a href="index.html"><img src="google.png" width="32" height="32" alt="Google" style="margin-right:5px;"></a>
+</div>
+</div>
+</div>
+<!-- End of Footer -->
+
+
+</body>
+</html>
